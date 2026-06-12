@@ -1,0 +1,4 @@
+# Dev-only files — not needed on the live site
+server.js
+download-images.js
+images/_candidates.json

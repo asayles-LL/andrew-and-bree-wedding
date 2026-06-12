@@ -1,0 +1,9 @@
+Image credits (Wikimedia Commons)
+file | author | license | source
+------------------------------------------------------------
+halong-karsts.jpg | Pasztilla aka Attila Terbócs | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ha_Long_Bay_2019-09_02.jpg
+halong-cruise.jpg | shankar s. from Dubai, united arab emirates | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:A_view_of_Ha_Long_Bay_from_the_high_point_of_Sun_Sot_cave_(31520203451).jpg
+hanoi.jpg | Richard Mortel from Riyadh, Saudi Arabia | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Old_Quarter_street_scene,_Hanoi_(2)_(38496798321).jpg
+hoian.jpg | dronepicr | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Hoi_An_lantern_lights_(39513532072).jpg
+ninhbinh.jpg | Jakub Hałun | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Trang_An_Landscape_Complex,_Ninh_Binh_Province,_Vietnam,_20240202_1456_5313.jpg
+sapa.jpg | Phi Phi Hoang | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Ray_over_terrace_rice_field_in_Sapa_-_Trung_Ch%E1%BA%A3i..jpg
