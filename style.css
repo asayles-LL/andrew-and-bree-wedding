@@ -238,39 +238,40 @@ a:hover { color: var(--color-gold-dark); }
     animation: fadeIn 1.8s ease-out;
 }
 .hero-subtitle {
-    font-size: 0.9rem;
-    font-weight: 300;
+    font-size: 0.92rem;
+    font-weight: 600;
     letter-spacing: 5px;
     margin-bottom: 18px;
     text-transform: uppercase;
     color: var(--color-white);
-    text-shadow: 0 2px 10px rgba(4, 25, 25, 0.72), 0 0 24px rgba(4, 25, 25, 0.38);
+    text-shadow: 0 1px 2px rgba(2, 16, 16, 0.9), 0 2px 12px rgba(4, 25, 25, 0.8), 0 0 28px rgba(4, 25, 25, 0.5);
 }
 .hero-title {
     font-size: 5.8rem;
-    font-weight: 300;
+    font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: 2px;
     line-height: 1.1;
     font-style: italic;
-    text-shadow: 0 4px 18px rgba(4, 25, 25, 0.72), 0 0 42px rgba(4, 25, 25, 0.42);
+    text-shadow: 0 1px 2px rgba(2, 16, 16, 0.85), 0 4px 18px rgba(4, 25, 25, 0.8), 0 0 46px rgba(4, 25, 25, 0.5);
 }
 .hero-date {
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.12rem;
+    font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-shadow: 0 2px 12px rgba(4, 25, 25, 0.74), 0 0 26px rgba(4, 25, 25, 0.36);
+    text-shadow: 0 1px 2px rgba(2, 16, 16, 0.9), 0 2px 12px rgba(4, 25, 25, 0.82), 0 0 26px rgba(4, 25, 25, 0.45);
 }
 .hero-names {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-style: italic;
+    font-weight: 600;
     letter-spacing: 1px;
     color: var(--color-white);
     margin-bottom: 40px;
-    text-shadow: 0 2px 12px rgba(4, 25, 25, 0.74), 0 0 26px rgba(4, 25, 25, 0.36);
+    text-shadow: 0 1px 2px rgba(2, 16, 16, 0.9), 0 2px 12px rgba(4, 25, 25, 0.82), 0 0 26px rgba(4, 25, 25, 0.45);
 }
 
 /* ===== Countdown ===== */
@@ -289,10 +290,10 @@ a:hover { color: var(--color-gold-dark); }
 .countdown-num {
     font-family: var(--font-heading);
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 1;
     margin-bottom: 5px;
-    text-shadow: 0 3px 14px rgba(4, 25, 25, 0.72);
+    text-shadow: 0 1px 2px rgba(2, 16, 16, 0.85), 0 3px 14px rgba(4, 25, 25, 0.78);
 }
 .countdown-label {
     font-size: 0.72rem;
@@ -801,7 +802,6 @@ a:hover { color: var(--color-gold-dark); }
     .countdown-num { font-size: 2.2rem; }
     .countdown-item { min-width: 60px; }
     .hero-title { font-size: 3.4rem; }
-
     .itinerary-list { padding-left: 0; }
     .itin-day { gap: 18px; }
 }
