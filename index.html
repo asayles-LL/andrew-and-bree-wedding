@@ -18,7 +18,6 @@
             <a href="#hero" class="active">Home</a>
             <a href="#welcome">Welcome</a>
             <a href="#cruise">The Cruise</a>
-            <a href="#gallery">Gallery</a>
             <a href="#itinerary">Itinerary</a>
             <a href="#pre-trip">Pre-Trip</a>
             <a href="#post-trip">Post-Trip</a>
@@ -35,10 +34,9 @@
     <section id="hero" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-subtitle">WE'RE GETTING MARRIED IN HA LONG BAY</p>
+            <p class="hero-subtitle">HA LONG BAY, VIETNAM</p>
             <h1 class="hero-title">Andrew &amp; Bree</h1>
-            <p class="hero-date">Aboard the Ambassador Cruise · Vietnam</p>
-            <p class="hero-names">March 30 – April 2, 2027 &nbsp;·&nbsp; Ceremony March 31</p>
+            <p class="hero-date">March 30 – April 2, 2027</p>
             <div class="countdown-container">
                 <div class="countdown-item">
                     <span id="days" class="countdown-num">00</span>
@@ -57,8 +55,8 @@
                     <span class="countdown-label">Secs</span>
                 </div>
             </div>
-            <a href="#welcome" class="btn btn-primary">Explore the Trip</a>
         </div>
+        <a href="#welcome" class="hero-scroll-cue" aria-label="Scroll to welcome section"></a>
     </section>
 
     <!-- ====== Welcome / Overview ====== -->
@@ -160,44 +158,19 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ====== Gallery: Where We'll Be ====== -->
-    <section id="gallery" class="section gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Where We'll Be</h2>
-                <div class="divider"></div>
-                <p class="section-subtitle">A glimpse of Ha Long Bay &amp; the wonders around it</p>
+            <!-- Cruise photos -->
+            <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Cruise photos">
+                <p class="carousel-label">📷 Cruise Photos</p>
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="images/halong-cruise.jpg" alt="Cruise boats among the islands of Ha Long Bay" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="images/halong-karsts.jpg" alt="Limestone karsts rising from Ha Long Bay" loading="lazy"></div>
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                    <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                </div>
+                <div class="carousel-dots" aria-hidden="true"></div>
             </div>
-            <div class="gallery-grid">
-                <figure class="gallery-item">
-                    <img src="images/halong-karsts.jpg" alt="Limestone karsts rising from Ha Long Bay" loading="lazy">
-                    <figcaption>Ha Long Bay</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/halong-cruise.jpg" alt="Cruise boats among the islands of Ha Long Bay" loading="lazy">
-                    <figcaption>A Bay of a Thousand Isles</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/hanoi.jpg" alt="Street scene in Hanoi's Old Quarter" loading="lazy">
-                    <figcaption>Hanoi</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/hoian.jpg" alt="Lanterns glowing at night in Hoi An" loading="lazy">
-                    <figcaption>Hoi An</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/ninhbinh.jpg" alt="Boats on the river at Trang An, Ninh Binh" loading="lazy">
-                    <figcaption>Ninh Binh</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/sapa.jpg" alt="Terraced rice fields in Sapa" loading="lazy">
-                    <figcaption>Sapa</figcaption>
-                </figure>
-            </div>
-            <p class="gallery-credit">Photos: Wikimedia Commons contributors (see credits). We'll add our own photos here too.</p>
         </div>
     </section>
 
@@ -303,6 +276,19 @@
                     </ul>
                 </article>
             </div>
+
+            <!-- Itinerary photos -->
+            <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Itinerary photos">
+                <p class="carousel-label">📷 Itinerary Photos</p>
+                <div class="carousel-track">
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                    <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                </div>
+                <div class="carousel-dots" aria-hidden="true"></div>
+            </div>
         </div>
     </section>
 
@@ -316,44 +302,115 @@
             </div>
 
             <div class="pretrip-intro">
-                <p>It's a long journey to Vietnam, so many guests are arriving a few days early to recover from the flight and explore <strong>Hanoi</strong> before we set sail. Here's where we recommend staying and how we're helping everyone get to the boat.</p>
+                <p>Vietnam is a long way to travel for most of us, so many guests are flying in a few days early to shake off the jet lag and explore before we set sail. If you're arriving a couple of days ahead, here are <strong>three wonderful places to base yourself</strong> — pick whichever suits your style. Each has an easy route to the ship on embarkation day.</p>
             </div>
 
-            <h3 class="subsection-title">Where to Stay in Hanoi</h3>
-            <p class="placeholder-banner">🛠️ We're finalizing our recommended hotels — details coming soon.</p>
-            <div class="details-grid">
-                <div class="details-card">
-                    <div class="details-icon">🏨</div>
-                    <h3>[Hotel Option 1]</h3>
-                    <p class="details-time">Recommended</p>
-                    <p class="details-location">[Neighborhood — e.g. Old Quarter]</p>
-                    <p class="details-desc">[Why we recommend it + any group rate or booking code.]</p>
-                </div>
-                <div class="details-card">
-                    <div class="details-icon">🏨</div>
-                    <h3>[Hotel Option 2]</h3>
-                    <p class="details-time">Mid-Range</p>
-                    <p class="details-location">[Neighborhood]</p>
-                    <p class="details-desc">[Notes.]</p>
-                </div>
-                <div class="details-card">
-                    <div class="details-icon">🏨</div>
-                    <h3>[Hotel Option 3]</h3>
-                    <p class="details-time">Budget-Friendly</p>
-                    <p class="details-location">[Neighborhood]</p>
-                    <p class="details-desc">[Notes.]</p>
-                </div>
+            <!-- Hotel booking key (status dots are reused beside each hotel below) -->
+            <div class="hotel-key">
+                <span class="key-title">Who's staying where:</span>
+                <span class="key-item"><span class="status status-couple"></span> Andrew &amp; Bree</span>
+                <span class="key-item"><span class="status status-guests"></span> Family &amp; friends</span>
+                <span class="key-item"><span class="status status-none"></span> Open — no bookings yet</span>
             </div>
 
-            <h3 class="subsection-title">Getting to the Cruise</h3>
-            <div class="info-row">
-                <div class="info-block">
-                    <h4>🚐 Hanoi → Ha Long Bay</h4>
-                    <p>The cruise departs from <strong>Ha Long International Cruise Port</strong>, about a 2.5–3 hour drive from Hanoi. [We're coordinating group transfers so everyone arrives in time for the 11:45 AM check-in on March 30 — details and sign-up coming soon.]</p>
+            <div class="pretrip-matrix">
+                <!-- ===== Row 1: Cities ===== -->
+                <div class="pt-box pt-city col-1">
+                    <span class="pt-num">1</span>
+                    <h3>Hanoi</h3>
+                    <p class="pt-tag">The Capital</p>
+                    <p class="pt-desc">Dive into Vietnam's buzzing capital — the lantern-lit Old Quarter, unforgettable street food, lakeside cafés, and centuries of history. It's the most popular base, with the easiest international arrival and plenty to fill a few days.</p>
                 </div>
-                <div class="info-block">
-                    <h4>🛫 Airport → Hotel</h4>
-                    <p>From <strong>Noi Bai International Airport (HAN)</strong> it's about a 45-minute drive into central Hanoi. The <strong>Grab</strong> app (Southeast Asia's Uber) and official airport taxis are both easy and affordable. [We'll confirm whether we're arranging any group airport pickups.]</p>
+                <div class="pt-box pt-city col-2">
+                    <span class="pt-num">2</span>
+                    <h3>Ninh Binh</h3>
+                    <p class="pt-tag">Ha Long Bay on Land</p>
+                    <p class="pt-desc">Trade boats for sampans among towering limestone karsts, emerald rivers, and rice paddies at Tam Coc and Trang An. Quieter and more rural than the city — a breathtaking, peaceful base, and an easy detour on the way to the bay.</p>
+                </div>
+                <div class="pt-box pt-city col-3">
+                    <span class="pt-num">3</span>
+                    <h3>Ha Long Bay</h3>
+                    <p class="pt-tag">Right by the Ship</p>
+                    <p class="pt-desc">Stay where it all happens — Ha Long City sits right beside the harbor our ship departs from. Wake up to bay views and enjoy the most relaxed embarkation morning of all, with no long transfer on sailing day.</p>
+                </div>
+
+                <!-- ===== Row 2: Galleries ===== -->
+                <div class="pt-box pt-gallery col-1">
+                    <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Hanoi photos">
+                        <p class="carousel-label">📷 Hanoi</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/hanoi.jpg" alt="Street scene in Hanoi's Old Quarter" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="pt-box pt-gallery col-2">
+                    <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Ninh Binh photos">
+                        <p class="carousel-label">📷 Ninh Binh</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/ninhbinh.jpg" alt="Boats on the river at Trang An, Ninh Binh" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="pt-box pt-gallery col-3">
+                    <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Ha Long Bay photos">
+                        <p class="carousel-label">📷 Ha Long Bay</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/halong-karsts.jpg" alt="Limestone karsts rising from Ha Long Bay" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <!-- ===== Row 3: Recommended hotels ===== -->
+                <!-- Set each dot with: status-none (open) · status-couple (Andrew & Bree) · status-guests (family & friends) -->
+                <div class="pt-box pt-hotels col-1">
+                    <h4>🏨 Recommended Hotels</h4>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-guests" title="Family &amp; friends staying here"></span><span class="hotel-name">[Hotel name]</span></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><span class="hotel-name">[Hotel name]</span></li>
+                    </ul>
+                </div>
+                <div class="pt-box pt-hotels col-2">
+                    <h4>🏨 Recommended Hotels</h4>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><span class="hotel-name">[Hotel name]</span></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><span class="hotel-name">[Hotel name]</span></li>
+                    </ul>
+                </div>
+                <div class="pt-box pt-hotels col-3">
+                    <h4>🏨 Recommended Hotels</h4>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-couple" title="Andrew &amp; Bree staying here"></span><span class="hotel-name">[Hotel name]</span></li>
+                        <li class="hotel"><span class="status status-guests" title="Family &amp; friends staying here"></span><span class="hotel-name">[Hotel name]</span></li>
+                    </ul>
+                </div>
+
+                <!-- ===== Row 4: Getting to the cruise ===== -->
+                <div class="pt-box pt-transport col-1">
+                    <h4>🚐 Getting to the Cruise</h4>
+                    <p>Ha Long International Cruise Port is about a <strong>2.5–3 hour drive</strong> from Hanoi. We're coordinating group transfers from Hanoi to arrive in time for the 11:45 AM check-in on March 30. [Sign-up details coming soon.]</p>
+                </div>
+                <div class="pt-box pt-transport col-2">
+                    <h4>🚐 Getting to the Cruise</h4>
+                    <p>Ninh Binh to Ha Long is roughly a <strong>3–3.5 hour drive</strong>, or you can route back through Hanoi to join the group transfer. [We'll confirm the best option.]</p>
+                </div>
+                <div class="pt-box pt-transport col-3">
+                    <h4>⚓ Getting to the Cruise</h4>
+                    <p>You're already here! The Ambassador Check-in Lounge at Ha Long International Cruise Port is a short <strong>taxi or Grab ride</strong> away. Just aim to arrive by 11:45 AM on March 30.</p>
                 </div>
             </div>
         </div>
@@ -369,37 +426,182 @@
             </div>
 
             <div class="posttrip-intro">
-                <p>After we disembark on April 2, we're continuing to explore Vietnam — and you're warmly invited to join us, or to branch off on your own adventure. Here are our plans and a few of the best places nearby.</p>
+                <p>After we disembark on April 2, we're not done with Vietnam yet — and you're warmly invited to join us on either leg, or branch off on your own adventure. Here's where we're headed, plus a roundup of the country's best.</p>
             </div>
 
             <h3 class="subsection-title">Our Plans — Come Along!</h3>
-            <p class="placeholder-banner">🛠️ We're nailing down our after-wedding plans — we'll post them here so you can join.</p>
-            <div class="info-row">
-                <div class="info-block highlight">
-                    <h4>📍 [Where we're headed next]</h4>
-                    <p>[Tell guests where you'll be after the cruise, the dates, and how they can join — e.g. a few days in Hoi An, Ninh Binh, or Sapa. Add hotel or booking info if you want guests to coordinate with you.]</p>
+            <div class="places-grid cols-2">
+                <!-- Plan 1: info -->
+                <div class="pt-box pt-plan place-1">
+                    <h3>Ha Giang Loop</h3>
+                    <span class="pt-tag">Northern Vietnam · April 2–7</span>
+                    <p class="pt-desc">First, we're heading north for the legendary <strong>Ha Giang Loop</strong> — a multi-day journey by motorbike (or private car with a driver) through Vietnam's most jaw-dropping mountain scenery: soaring limestone passes, terraced valleys, winding rivers, and remote hill-tribe villages. It's the adventure of the trip. Want to join the ride? Let us know — the more the merrier!</p>
+                </div>
+                <!-- Plan 2: info -->
+                <div class="pt-box pt-plan place-2">
+                    <h3>Phu Quoc</h3>
+                    <span class="pt-tag">Southern Island · April 8–10</span>
+                    <p class="pt-desc">Then we trade mountains for the beach on <strong>Phu Quoc</strong>, Vietnam's tropical island in the south — powder-white sand, clear warm water, fresh seafood, and sunset views. The perfect way to relax and recharge before flying home. Come soak up the sun with us!</p>
+                </div>
+                <!-- Plan 1: gallery -->
+                <div class="pt-box pt-gallery place-1">
+                    <div class="section-carousel" data-carousel aria-label="Ha Giang Loop photos">
+                        <p class="carousel-label">📷 Ha Giang Loop</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/hagiang.jpg" alt="Ma Pi Leng pass winding road, Ha Giang" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <!-- Plan 2: gallery -->
+                <div class="pt-box pt-gallery place-2">
+                    <div class="section-carousel" data-carousel aria-label="Phu Quoc photos">
+                        <p class="carousel-label">📷 Phu Quoc</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/phuquoc.jpg" alt="White-sand beach and turquoise water, Phu Quoc" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
                 </div>
             </div>
 
             <h3 class="subsection-title">Other Amazing Things to Do</h3>
-            <div class="details-grid">
-                <div class="details-card">
-                    <div class="details-icon">🏮</div>
-                    <h3>Hoi An</h3>
-                    <p class="details-time">Lantern-lit old town</p>
-                    <p class="details-desc">A UNESCO-listed riverside town famous for tailor shops, glowing lanterns, and incredible food. A short flight south.</p>
+            <div class="posttrip-intro">
+                <p>Nine of our favorite places across Vietnam — any one makes a brilliant add-on to your trip.</p>
+            </div>
+
+            <!-- Group 1 -->
+            <div class="places-grid cols-3">
+                <div class="pt-box pt-city place-1"><span class="pt-num">1</span><h3>Hoi An</h3><p class="pt-tag">Central · Lantern Town</p><p class="pt-desc">A UNESCO-listed riverside old town of glowing lanterns, tailor shops, and unforgettable food.</p></div>
+                <div class="pt-box pt-city place-2"><span class="pt-num">2</span><h3>Hue</h3><p class="pt-tag">Central · Imperial City</p><p class="pt-desc">The former royal capital — a vast walled citadel, emperors' tombs, and the Perfume River.</p></div>
+                <div class="pt-box pt-city place-3"><span class="pt-num">3</span><h3>Da Nang</h3><p class="pt-tag">Central · Beaches &amp; Bridges</p><p class="pt-desc">A breezy beach city and gateway to the famous Golden Bridge and Ba Na Hills.</p></div>
+                <div class="pt-box pt-gallery place-1">
+                    <div class="section-carousel" data-carousel aria-label="Hoi An photos">
+                        <p class="carousel-label">📷 Hoi An</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/hoian.jpg" alt="Lanterns glowing at night in Hoi An" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
                 </div>
-                <div class="details-card">
-                    <div class="details-icon">⛰️</div>
-                    <h3>Ninh Binh</h3>
-                    <p class="details-time">"Ha Long Bay on land"</p>
-                    <p class="details-desc">Sampan boat rides through rice paddies and limestone caves at Tam Coc and Trang An. About 2 hours from Hanoi.</p>
+                <div class="pt-box pt-gallery place-2">
+                    <div class="section-carousel" data-carousel aria-label="Hue photos">
+                        <p class="carousel-label">📷 Hue</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/hue.jpg" alt="Stone dragon statue at the Hue citadel" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
                 </div>
-                <div class="details-card">
-                    <div class="details-icon">🌄</div>
-                    <h3>Sapa</h3>
-                    <p class="details-time">Terraced mountains</p>
-                    <p class="details-desc">Spectacular rice terraces and hill-tribe villages in the northern highlands — wonderful for trekking.</p>
+                <div class="pt-box pt-gallery place-3">
+                    <div class="section-carousel" data-carousel aria-label="Da Nang photos">
+                        <p class="carousel-label">📷 Da Nang</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/danang.jpg" alt="The Golden Bridge above a sea of clouds, Ba Na Hills" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="places-grid cols-3">
+                <div class="pt-box pt-city place-1"><span class="pt-num">4</span><h3>Ho Chi Minh City</h3><p class="pt-tag">South · Saigon</p><p class="pt-desc">Vietnam's electric southern metropolis — history, street life, rooftop bars, and nonstop energy.</p></div>
+                <div class="pt-box pt-city place-2"><span class="pt-num">5</span><h3>Mekong Delta</h3><p class="pt-tag">South · River Life</p><p class="pt-desc">Floating markets, coconut groves, and village life along the mighty Mekong River.</p></div>
+                <div class="pt-box pt-city place-3"><span class="pt-num">6</span><h3>Nha Trang</h3><p class="pt-tag">South Coast · Beaches</p><p class="pt-desc">A lively seaside resort town with long sandy beaches, offshore islands, and great diving.</p></div>
+                <div class="pt-box pt-gallery place-1">
+                    <div class="section-carousel" data-carousel aria-label="Ho Chi Minh City photos">
+                        <p class="carousel-label">📷 Ho Chi Minh City</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/hochiminh.jpg" alt="Ho Chi Minh City skyline along the river" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="pt-box pt-gallery place-2">
+                    <div class="section-carousel" data-carousel aria-label="Mekong Delta photos">
+                        <p class="carousel-label">📷 Mekong Delta</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/mekong.jpg" alt="Woman at a floating market in the Mekong Delta" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="pt-box pt-gallery place-3">
+                    <div class="section-carousel" data-carousel aria-label="Nha Trang photos">
+                        <p class="carousel-label">📷 Nha Trang</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/nhatrang.jpg" alt="Long sandy beach at Nha Trang" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 3 -->
+            <div class="places-grid cols-3">
+                <div class="pt-box pt-city place-1"><span class="pt-num">7</span><h3>Sapa</h3><p class="pt-tag">North · Rice Terraces</p><p class="pt-desc">Misty peaks, emerald terraces, and hill-tribe villages — some of Vietnam's finest trekking.</p></div>
+                <div class="pt-box pt-city place-2"><span class="pt-num">8</span><h3>Phong Nha</h3><p class="pt-tag">Central · Cave Country</p><p class="pt-desc">A national park hiding some of the largest and most spectacular caves on Earth.</p></div>
+                <div class="pt-box pt-city place-3"><span class="pt-num">9</span><h3>Da Lat</h3><p class="pt-tag">Highlands · Cool Climate</p><p class="pt-desc">A charming highland escape of pine forests, lakes, flower gardens, and waterfalls.</p></div>
+                <div class="pt-box pt-gallery place-1">
+                    <div class="section-carousel" data-carousel aria-label="Sapa photos">
+                        <p class="carousel-label">📷 Sapa</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/sapa.jpg" alt="Terraced rice fields in Sapa" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="pt-box pt-gallery place-2">
+                    <div class="section-carousel" data-carousel aria-label="Phong Nha photos">
+                        <p class="carousel-label">📷 Phong Nha</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/phongnha.jpg" alt="Illuminated cave interior at Phong Nha" loading="lazy"></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="pt-box pt-gallery place-3">
+                    <div class="section-carousel" data-carousel aria-label="Da Lat photos">
+                        <p class="carousel-label">📷 Da Lat</p>
+                        <div class="carousel-track">
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                            <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+                        </div>
+                        <div class="carousel-dots" aria-hidden="true"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -414,31 +616,63 @@
                 <p class="section-subtitle">Everything you need to know before you go</p>
             </div>
 
-            <div class="essentials-grid">
-                <div class="essential-item">
-                    <h4>🛂 Visa &amp; Passport</h4>
-                    <p>Most visitors need a visa for Vietnam — the easiest route is the official <strong>E-Visa</strong>, applied for online about 2–4 weeks ahead. Bring a <strong>passport valid for at least 6 months</strong>. We'll need your passport details before the cruise for onboard registration.</p>
+            <div class="essentials-layout">
+                <!-- Left: tall checklist (placeholder items — to be filled in) -->
+                <aside class="essentials-checklist">
+                    <h3>Before You Go</h3>
+                    <p class="checklist-note">Your pre-trip checklist — we'll fill this in soon.</p>
+                    <ul class="checklist">
+                        <li>[Checklist item — e.g. Apply for your Vietnam E-Visa]</li>
+                        <li>[Checklist item — e.g. Passport valid 6+ months]</li>
+                        <li>[Checklist item — e.g. Book your flights to Hanoi]</li>
+                        <li>[Checklist item]</li>
+                        <li>[Checklist item]</li>
+                        <li>[Checklist item]</li>
+                        <li>[Checklist item]</li>
+                        <li>[Checklist item]</li>
+                    </ul>
+                </aside>
+
+                <!-- Right: the six info boxes, 2 across × 3 down -->
+                <div class="essentials-grid">
+                    <div class="essential-item">
+                        <h4>🛂 Visa &amp; Passport</h4>
+                        <p>Most visitors need a visa for Vietnam — the easiest route is the official <strong>E-Visa</strong>, applied for online about 2–4 weeks ahead. Bring a <strong>passport valid for at least 6 months</strong>. We'll need your passport details before the cruise for onboard registration.</p>
+                    </div>
+                    <div class="essential-item">
+                        <h4>✈️ Flights</h4>
+                        <p>Fly into <strong>Noi Bai International Airport (HAN)</strong> in Hanoi. Book early for the best fares — it's a long-haul trip for most of us. Plan to arrive at least a day before the cruise.</p>
+                    </div>
+                    <div class="essential-item">
+                        <h4>🧳 What to Pack</h4>
+                        <p>Wedding attire, comfortable clothes for cave &amp; island visits, swimwear, sturdy walking shoes, sunscreen, a light rain layer, and <strong>motion-sickness medicine</strong>. Bring any personal medications you need.</p>
+                    </div>
+                    <div class="essential-item">
+                        <h4>💵 Money</h4>
+                        <p>The currency is the <strong>Vietnamese Dong (VND)</strong>. Cards work in cities; carry cash for markets and small vendors. ATMs are widely available. Onboard, you'll settle drinks, spa, and incidentals at check-out.</p>
+                    </div>
+                    <div class="essential-item">
+                        <h4>📱 Staying Connected</h4>
+                        <p>Grab a local <strong>eSIM or SIM card</strong> for cheap data, and use the <strong>Grab app</strong> for taxis. Note: Wi-Fi onboard is available in the restaurant but <strong>limited out in the bay</strong> — a lovely excuse to unplug.</p>
+                    </div>
+                    <div class="essential-item">
+                        <h4>📋 Good to Know</h4>
+                        <p>No outside food or drink onboard without the cruise's consent. Smoking only in designated outdoor areas — never in cabins. The full onboard schedule and dress code will be shared before we sail.</p>
+                    </div>
                 </div>
-                <div class="essential-item">
-                    <h4>✈️ Flights</h4>
-                    <p>Fly into <strong>Noi Bai International Airport (HAN)</strong> in Hanoi. Book early for the best fares — it's a long-haul trip for most of us. Plan to arrive at least a day before the cruise.</p>
+            </div>
+
+            <!-- Travel Tips photos -->
+            <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Travel tips photos">
+                <p class="carousel-label">📷 Travel Tips Photos</p>
+                <div class="carousel-track">
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+                    <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
                 </div>
-                <div class="essential-item">
-                    <h4>🧳 What to Pack</h4>
-                    <p>Wedding attire, comfortable clothes for cave &amp; island visits, swimwear, sturdy walking shoes, sunscreen, a light rain layer, and <strong>motion-sickness medicine</strong>. Bring any personal medications you need.</p>
-                </div>
-                <div class="essential-item">
-                    <h4>💵 Money</h4>
-                    <p>The currency is the <strong>Vietnamese Dong (VND)</strong>. Cards work in cities; carry cash for markets and small vendors. ATMs are widely available. Onboard, you'll settle drinks, spa, and incidentals at check-out.</p>
-                </div>
-                <div class="essential-item">
-                    <h4>📱 Staying Connected</h4>
-                    <p>Grab a local <strong>eSIM or SIM card</strong> for cheap data, and use the <strong>Grab app</strong> for taxis. Note: Wi-Fi onboard is available in the restaurant but <strong>limited out in the bay</strong> — a lovely excuse to unplug.</p>
-                </div>
-                <div class="essential-item">
-                    <h4>📋 Good to Know</h4>
-                    <p>No outside food or drink onboard without the cruise's consent. Smoking only in designated outdoor areas — never in cabins. The full onboard schedule and dress code will be shared before we sail.</p>
-                </div>
+                <div class="carousel-dots" aria-hidden="true"></div>
             </div>
         </div>
     </section>

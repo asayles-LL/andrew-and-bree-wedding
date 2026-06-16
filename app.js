@@ -71,7 +71,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealTargets.forEach(el => observer.observe(el));
 
-    /* 5. Active nav link highlighting on scroll */
+    /* 5. Per-section photo carousels */
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+        const dotsWrap = carousel.querySelector('.carousel-dots');
+        if (slides.length <= 1) {
+            carousel.classList.add('single');
+            if (slides[0]) slides[0].classList.add('active');
+            return;
+        }
+
+        let index = 0;
+        const show = i => {
+            index = (i + slides.length) % slides.length;
+            slides.forEach((s, n) => s.classList.toggle('active', n === index));
+            if (dotsWrap) {
+                dotsWrap.querySelectorAll('.dot').forEach((d, n) =>
+                    d.classList.toggle('active', n === index));
+            }
+        };
+
+        // Build clickable dots
+        if (dotsWrap) {
+            slides.forEach((_, n) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'dot';
+                dot.setAttribute('aria-label', `Go to photo ${n + 1}`);
+                dot.addEventListener('click', () => show(n));
+                dotsWrap.appendChild(dot);
+            });
+        }
+
+        carousel.querySelector('.carousel-btn.next')
+            ?.addEventListener('click', () => show(index + 1));
+        carousel.querySelector('.carousel-btn.prev')
+            ?.addEventListener('click', () => show(index - 1));
+
+        show(0);
+    });
+
+    /* 6. Active nav link highlighting on scroll */
     const sections = document.querySelectorAll('section');
     const navLinksList = document.querySelectorAll('.nav-links a');
 
