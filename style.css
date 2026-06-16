@@ -901,6 +901,9 @@ a:hover { color: var(--color-gold-dark); }
 .pt-plan { text-align: left; border-left: 4px solid var(--color-gold); }
 .pt-plan h3 { font-size: 1.9rem; color: var(--color-text-dark); margin-bottom: 4px; }
 .pt-plan .pt-tag { display: block; margin-bottom: 12px; }
+.plan-link { margin-top: 12px; font-size: 0.85rem; font-weight: 600; }
+.plan-link a { color: var(--color-primary); }
+.plan-link a:hover { color: var(--color-gold-dark); }
 
 /* Recommended hotels + booking-status dots */
 .pt-hotels > h4 {
