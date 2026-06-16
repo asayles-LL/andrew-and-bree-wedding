@@ -166,13 +166,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lb) {
         const lbImg = lb.querySelector('.lb-img');
         const lbCounter = lb.querySelector('.lb-counter');
+        const lbCaption = lb.querySelector('.lb-caption');
         let lbList = [], lbIndex = 0;
 
         const lbShow = i => {
             if (!lbList.length) return;
             lbIndex = (i + lbList.length) % lbList.length;
-            lbImg.src = lbList[lbIndex].src;
-            lbImg.alt = lbList[lbIndex].alt || '';
+            const img = lbList[lbIndex];
+            lbImg.src = img.src;
+            lbImg.alt = img.alt || '';
+            // Carry the slide caption (if any) into the lightbox
+            const cap = img.closest('.carousel-slide')?.querySelector('.slide-caption');
+            lbCaption.innerHTML = cap ? cap.innerHTML : '';
+            lbCaption.style.display = cap ? '' : 'none';
             lbCounter.textContent = lbList.length > 1 ? `${lbIndex + 1} / ${lbList.length}` : '';
         };
         const lbClose = () => {
