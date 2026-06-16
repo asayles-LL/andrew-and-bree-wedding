@@ -160,12 +160,11 @@
             </div>
 
             <!-- Cruise photos -->
-            <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Cruise photos">
+            <!-- Auto-loads images/cruise-01.jpg, cruise-02.jpg, … in order (see app.js). -->
+            <div class="section-carousel" data-autoload="cruise" aria-roledescription="carousel" aria-label="Cruise photos">
                 <p class="carousel-label">📷 Cruise Photos</p>
                 <div class="carousel-track">
-                    <div class="carousel-slide"><img src="images/halong-cruise.jpg" alt="Cruise boats among the islands of Ha Long Bay" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="images/halong-karsts.jpg" alt="Limestone karsts rising from Ha Long Bay" loading="lazy"></div>
-                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                    <div class="carousel-slide carousel-placeholder" data-fallback><span>＋ Cruise photos coming soon</span></div>
                     <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
                     <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
                 </div>
@@ -276,19 +275,6 @@
                     </ul>
                 </article>
             </div>
-
-            <!-- Itinerary photos -->
-            <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Itinerary photos">
-                <p class="carousel-label">📷 Itinerary Photos</p>
-                <div class="carousel-track">
-                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
-                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
-                    <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
-                    <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
-                    <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
-                </div>
-                <div class="carousel-dots" aria-hidden="true"></div>
-            </div>
         </div>
     </section>
 
@@ -336,12 +322,11 @@
 
                 <!-- ===== Row 2: Galleries ===== -->
                 <div class="pt-box pt-gallery col-1">
-                    <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Hanoi photos">
+                    <!-- Auto-loads images/hanoi-01.jpg, hanoi-02.jpg, … in order -->
+                    <div class="section-carousel" data-autoload="hanoi" aria-roledescription="carousel" aria-label="Hanoi photos">
                         <p class="carousel-label">📷 Hanoi</p>
                         <div class="carousel-track">
-                            <div class="carousel-slide"><img src="images/hanoi.jpg" alt="Street scene in Hanoi's Old Quarter" loading="lazy"></div>
-                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
-                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder" data-fallback><span>＋ Hanoi photos coming soon</span></div>
                             <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
                             <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
                         </div>
@@ -349,12 +334,11 @@
                     </div>
                 </div>
                 <div class="pt-box pt-gallery col-2">
-                    <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Ninh Binh photos">
+                    <!-- Auto-loads images/ninhbinh-01.jpg, ninhbinh-02.jpg, … in order -->
+                    <div class="section-carousel" data-autoload="ninhbinh" aria-roledescription="carousel" aria-label="Ninh Binh photos">
                         <p class="carousel-label">📷 Ninh Binh</p>
                         <div class="carousel-track">
-                            <div class="carousel-slide"><img src="images/ninhbinh.jpg" alt="Boats on the river at Trang An, Ninh Binh" loading="lazy"></div>
-                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
-                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder" data-fallback><span>＋ Ninh Binh photos coming soon</span></div>
                             <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
                             <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
                         </div>
@@ -362,12 +346,11 @@
                     </div>
                 </div>
                 <div class="pt-box pt-gallery col-3">
-                    <div class="section-carousel" data-carousel aria-roledescription="carousel" aria-label="Ha Long Bay photos">
+                    <!-- Auto-loads images/halong-01.jpg, halong-02.jpg, … in order -->
+                    <div class="section-carousel" data-autoload="halong" aria-roledescription="carousel" aria-label="Ha Long Bay photos">
                         <p class="carousel-label">📷 Ha Long Bay</p>
                         <div class="carousel-track">
-                            <div class="carousel-slide"><img src="images/halong-karsts.jpg" alt="Limestone karsts rising from Ha Long Bay" loading="lazy"></div>
-                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
-                            <div class="carousel-slide carousel-placeholder"><span>＋ Your photo here</span></div>
+                            <div class="carousel-slide carousel-placeholder" data-fallback><span>＋ Ha Long Bay photos coming soon</span></div>
                             <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
                             <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
                         </div>
@@ -379,23 +362,56 @@
                 <!-- Set each dot with: status-none (open) · status-couple (Andrew & Bree) · status-guests (family & friends) -->
                 <div class="pt-box pt-hotels col-1">
                     <h4>🏨 Recommended Hotels</h4>
+                    <p class="hotel-tier-label">Luxury · $300–600+</p>
                     <ul class="hotel-list">
-                        <li class="hotel"><span class="status status-guests" title="Family &amp; friends staying here"></span><span class="hotel-name">[Hotel name]</span></li>
-                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><span class="hotel-name">[Hotel name]</span></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://www.sofitel-legend-metropole-hanoi.com/" target="_blank" rel="noopener">Sofitel Legend Metropole</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://capellahotels.com/en/capella-hanoi" target="_blank" rel="noopener">Capella Hanoi</a></li>
+                    </ul>
+                    <p class="hotel-tier-label">Moderate · $120–250</p>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://en.hanoiorientaljade.com/" target="_blank" rel="noopener">The Oriental Jade Hotel</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://peridotgrandhotel.com/" target="_blank" rel="noopener">Peridot Grand</a></li>
+                    </ul>
+                    <p class="hotel-tier-label">Budget · $40–100</p>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://bespoketrendyhotelhanoi.com/" target="_blank" rel="noopener">Bespoke Trendy Hotel</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://lanueva.vn/" target="_blank" rel="noopener">La Nueva Boutique Hotel</a></li>
                     </ul>
                 </div>
                 <div class="pt-box pt-hotels col-2">
                     <h4>🏨 Recommended Hotels</h4>
+                    <p class="hotel-tier-label">Luxury · $130–280</p>
                     <ul class="hotel-list">
-                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><span class="hotel-name">[Hotel name]</span></li>
-                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><span class="hotel-name">[Hotel name]</span></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://emeraldaresort.com/" target="_blank" rel="noopener">Emeralda Resort</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://www.tamcocgarden.com/" target="_blank" rel="noopener">Tam Coc Garden Resort</a></li>
+                    </ul>
+                    <p class="hotel-tier-label">Moderate · $60–130</p>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://hiddencharmresort.com/en/" target="_blank" rel="noopener">Hidden Charm Hotel &amp; Resort</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://thereedhotel.com/en/" target="_blank" rel="noopener">The Reed Hotel</a></li>
+                    </ul>
+                    <p class="hotel-tier-label">Budget · $25–60</p>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://tamcocholidayretreat.rsvn.vn/" target="_blank" rel="noopener">Tam Coc Holiday Retreat</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://nguyenshack.com/" target="_blank" rel="noopener">Nguyen Shack Ecolodge</a></li>
                     </ul>
                 </div>
                 <div class="pt-box pt-hotels col-3">
                     <h4>🏨 Recommended Hotels</h4>
+                    <p class="hotel-tier-label">Luxury · $150–350</p>
                     <ul class="hotel-list">
-                        <li class="hotel"><span class="status status-couple" title="Andrew &amp; Bree staying here"></span><span class="hotel-name">[Hotel name]</span></li>
-                        <li class="hotel"><span class="status status-guests" title="Family &amp; friends staying here"></span><span class="hotel-name">[Hotel name]</span></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://vinpearl.com/en/hotels/vinpearl-resort-spa-ha-long" target="_blank" rel="noopener">Vinpearl Resort &amp; Spa</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://www.wyndhamhalong.com/en" target="_blank" rel="noopener">Wyndham Legend Halong</a></li>
+                    </ul>
+                    <p class="hotel-tier-label">Moderate · $80–160</p>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://novotelhalongbay.com/" target="_blank" rel="noopener">Novotel Ha Long Bay</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://booking.muongthanh.com/hotel-muong-thanh-luxury-ha-long-centre" target="_blank" rel="noopener">Muong Thanh Luxury</a></li>
+                    </ul>
+                    <p class="hotel-tier-label">Budget · $35–80</p>
+                    <ul class="hotel-list">
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://newstarhalonghotel.com/" target="_blank" rel="noopener">New Star Halong Hotel</a></li>
+                        <li class="hotel"><span class="status status-none" title="No bookings yet"></span><a class="hotel-name" href="https://halonglavenderhotel.com/" target="_blank" rel="noopener">Halong Lavender Hotel</a></li>
                     </ul>
                 </div>
 
@@ -698,6 +714,15 @@
             <p class="footer-copyright">Andrew &amp; Bree · Ha Long Bay · March 2027</p>
         </div>
     </footer>
+
+    <!-- Lightbox: full-screen photo viewer for all galleries -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+        <button class="lb-btn lb-close" type="button" aria-label="Close">×</button>
+        <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">‹</button>
+        <img class="lb-img" src="" alt="">
+        <button class="lb-btn lb-next" type="button" aria-label="Next photo">›</button>
+        <div class="lb-counter"></div>
+    </div>
 
     <script src="app.js"></script>
 </body>

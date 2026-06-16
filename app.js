@@ -72,14 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
     revealTargets.forEach(el => observer.observe(el));
 
     /* 5. Per-section photo carousels */
-    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const initCarousel = carousel => {
         const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
         const dotsWrap = carousel.querySelector('.carousel-dots');
+        if (dotsWrap) dotsWrap.innerHTML = '';
+
         if (slides.length <= 1) {
             carousel.classList.add('single');
-            if (slides[0]) slides[0].classList.add('active');
+            slides.forEach(s => s.classList.add('active'));
             return;
         }
+        carousel.classList.remove('single');
 
         let index = 0;
         const show = i => {
@@ -91,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Build clickable dots
         if (dotsWrap) {
             slides.forEach((_, n) => {
                 const dot = document.createElement('button');
@@ -103,13 +105,107 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        carousel.querySelector('.carousel-btn.next')
-            ?.addEventListener('click', () => show(index + 1));
-        carousel.querySelector('.carousel-btn.prev')
-            ?.addEventListener('click', () => show(index - 1));
-
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        if (!carousel.dataset.bound) {
+            nextBtn?.addEventListener('click', () => show(index + 1));
+            prevBtn?.addEventListener('click', () => show(index - 1));
+            carousel.dataset.bound = '1';
+        }
         show(0);
+    };
+
+    document.querySelectorAll('[data-carousel]').forEach(initCarousel);
+
+    /* 5b. Auto-loading galleries: drop images/<prefix>-01.jpg, -02.jpg, … in the
+       images folder (numbered in order) and they appear automatically. */
+    document.querySelectorAll('[data-autoload]').forEach(carousel => {
+        const prefix = carousel.getAttribute('data-autoload');
+        const track = carousel.querySelector('.carousel-track');
+        const firstBtn = track.querySelector('.carousel-btn');
+        let i = 1, added = 0;
+
+        const finish = () => {
+            if (added > 0) track.querySelectorAll('[data-fallback]').forEach(el => el.remove());
+            initCarousel(carousel);
+        };
+
+        const tryIndex = () => {
+            const n = String(i).padStart(2, '0');
+            const candidates = [
+                `images/${prefix}-${n}.jpg`, `images/${prefix}-${i}.jpg`,
+                `images/${prefix}-${n}.jpeg`, `images/${prefix}-${n}.png`,
+                `images/${prefix}-${n}.webp`, `images/${prefix}-${i}.webp`,
+            ];
+            let c = 0;
+            const attempt = () => {
+                const src = candidates[c];
+                const probe = new Image();
+                probe.onload = () => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.loading = 'lazy';
+                    img.alt = `Ambassador Cruise — photo ${i}`;
+                    slide.appendChild(img);
+                    track.insertBefore(slide, firstBtn);
+                    added++; i++;
+                    tryIndex();
+                };
+                probe.onerror = () => { c++; (c < candidates.length) ? attempt() : finish(); };
+                probe.src = src;
+            };
+            attempt();
+        };
+        tryIndex();
     });
+
+    /* 5c. Lightbox — click any gallery photo to view it full-screen */
+    const lb = document.getElementById('lightbox');
+    if (lb) {
+        const lbImg = lb.querySelector('.lb-img');
+        const lbCounter = lb.querySelector('.lb-counter');
+        let lbList = [], lbIndex = 0;
+
+        const lbShow = i => {
+            if (!lbList.length) return;
+            lbIndex = (i + lbList.length) % lbList.length;
+            lbImg.src = lbList[lbIndex].src;
+            lbImg.alt = lbList[lbIndex].alt || '';
+            lbCounter.textContent = lbList.length > 1 ? `${lbIndex + 1} / ${lbList.length}` : '';
+        };
+        const lbClose = () => {
+            lb.classList.remove('open');
+            lb.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            lbImg.src = '';
+        };
+
+        // Open when a carousel photo is clicked (delegated — works for auto-loaded images too)
+        document.addEventListener('click', e => {
+            const img = e.target.closest('.carousel-slide img');
+            if (!img) return;
+            const track = img.closest('.carousel-track');
+            lbList = Array.from(track.querySelectorAll('.carousel-slide img'));
+            lb.classList.add('open');
+            lb.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            lbShow(lbList.indexOf(img));
+        });
+
+        lb.querySelector('.lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex + 1); });
+        lb.querySelector('.lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex - 1); });
+        lb.querySelector('.lb-close').addEventListener('click', lbClose);
+        lb.addEventListener('click', e => { if (e.target === lb) lbClose(); }); // click backdrop to close
+
+        document.addEventListener('keydown', e => {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') lbClose();
+            else if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+            else if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+        });
+    }
 
     /* 6. Active nav link highlighting on scroll */
     const sections = document.querySelectorAll('section');
