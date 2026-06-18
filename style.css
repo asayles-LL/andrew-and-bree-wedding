@@ -391,6 +391,14 @@ a:hover { color: var(--color-gold-dark); }
     gap: 30px;
     margin-top: 40px;
 }
+/* Cruise section has 2 cards — center them to line up with the
+   Included / Not-Included blocks below */
+.details-grid.cruise-cards {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .details-card {
     background-color: var(--color-bg-light);
     padding: 45px 30px;
