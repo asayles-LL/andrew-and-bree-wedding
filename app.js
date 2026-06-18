@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkScroll();
 
     /* 3. Countdown timer — ceremony: March 31, 2027 at 3:00 PM Vietnam time (GMT+7) */
-    const targetDate = new Date('2027-03-31T15:00:00+07:00').getTime();
+    const targetDate = new Date('2027-03-31T17:00:00+07:00').getTime();
 
     const updateCountdown = () => {
         const difference = targetDate - Date.now();

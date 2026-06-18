@@ -184,6 +184,15 @@ a:hover { color: var(--color-gold-dark); }
 }
 .navbar.scrolled .nav-links a:hover,
 .navbar.scrolled .nav-links a.active { color: #8f641c; }
+.nav-fancy {
+    font-family: var(--font-heading);
+    font-size: 1.35em;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: none;
+    line-height: 0;
+}
 
 .nav-links a::after {
     content: '';
@@ -382,6 +391,9 @@ a:hover { color: var(--color-gold-dark); }
     text-align: center;
     color: var(--color-text-muted);
     font-size: 1.02rem;
+}
+.posttrip-intro {
+    max-width: 920px;
 }
 
 /* Shared card grid (cruise, hotels, post-trip ideas) */
@@ -766,6 +778,11 @@ a:hover { color: var(--color-gold-dark); }
     object-fit: cover;
     display: block;
 }
+/* Hanoi & Ninh Binh galleries: show the top of each photo (avoid cropping the top off) */
+[data-autoload="hanoi"] .carousel-slide img,
+[data-autoload="ninhbinh"] .carousel-slide img {
+    object-position: top;
+}
 /* Caption overlay (itinerary slideshow) */
 .slide-caption {
     position: absolute;
@@ -929,8 +946,46 @@ a:hover { color: var(--color-gold-dark); }
     margin-top: 16px;
 }
 .places-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+/* Pre-Cruise / Post-Cruise group labels (a header row inside the 3-col grid) */
+.group-label {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--color-gold-dark);
+    margin: 0;
+    align-self: end;
+}
+.plans-grid { margin-top: 28px; }
+.plans-grid .pre-label  { grid-column: 1; }
+.plans-grid .post-label { grid-column: 2 / 4; }
 .places-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .places-grid + .places-grid { margin-top: 22px; }
+
+/* "Choose Your Adventure" — two explore blocks (Vietnam slideshow + stopover chips) */
+.explore-block { text-align: center; margin-top: 30px; }
+.explore-block + .explore-block { margin-top: 56px; }
+.explore-title { font-size: 1.9rem; color: var(--color-text-dark); margin-bottom: 12px; }
+.explore-text { max-width: 720px; margin: 0 auto 26px; color: var(--color-text-muted); }
+.explore-carousel { max-width: 760px; }
+.country-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.country-chip {
+    background-color: var(--color-bg-light);
+    border: 1px solid rgba(21, 122, 116, 0.18);
+    border-radius: 50px;
+    padding: 9px 20px;
+    font-size: 0.92rem;
+    color: var(--color-text-dark);
+    box-shadow: var(--shadow-soft);
+}
 
 /* "Our Plans" info block — left-aligned, gold accent */
 .pt-plan { text-align: left; border-left: 4px solid var(--color-gold); }
@@ -1159,6 +1214,8 @@ a.hotel-name:hover { color: var(--color-gold-dark); }
     letter-spacing: 0.5px;
 }
 .footer-contact-label { font-size: 0.9rem; margin-bottom: 24px; }
+.footer-contact-label a { color: var(--color-gold); }
+.footer-contact-label a:hover { color: var(--color-primary-light); }
 .footer-contacts {
     display: flex;
     justify-content: center;
@@ -1253,6 +1310,12 @@ a.hotel-name:hover { color: var(--color-gold-dark); }
 
     /* Post-Trip place grids: stack and regroup each place (info → its gallery) */
     .places-grid.cols-2, .places-grid.cols-3 { grid-template-columns: 1fr; }
+    /* Group labels: full width, ordered with their group */
+    .plans-grid .pre-label, .plans-grid .post-label { grid-column: 1; margin-top: 18px; }
+    .plans-grid .pre-label { order: -3; }
+    .plans-grid .post-label { order: 0; }
+    .places-grid .place-0.pt-city, .places-grid .place-0.pt-plan { order: -2; }
+    .places-grid .place-0.pt-gallery { order: -1; }
     .places-grid .place-1.pt-city, .places-grid .place-1.pt-plan { order: 1; }
     .places-grid .place-1.pt-gallery { order: 2; }
     .places-grid .place-2.pt-city, .places-grid .place-2.pt-plan { order: 3; }
